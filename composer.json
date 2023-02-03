@@ -1,0 +1,39 @@
+{
+  "name": "jstewart/programmers-paradise",
+  "description": "",
+  "license": "MIT",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "acf-pro/acf-pro",
+        "version": "1.0.9",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "./paid-plugins/advanced-custom-fields-pro.zip"
+        }
+      }
+    }
+  ],
+  "require": {
+    "wpackagist-plugin/disable-gutenberg-blocks": "1.0.9",
+    "acf-pro/acf-pro": "*"
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  },
+  "extra": {
+    "installer-paths": {
+      "plugins/{$name}": [
+        "type:wordpress-plugin"
+      ]
+    }
+  }
+}

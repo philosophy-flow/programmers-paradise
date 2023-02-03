@@ -1,0 +1,322 @@
+/*
+Theme Name: Programmer's Paradise
+Author: a Programmer
+Author URI: https://jacobstewart.dev/
+Description: A veritable sandbox, playground; a park for your imagination to roam free within. Use this space to build, create, and most importantly: learn.
+Tags: sandbox, learning, experimental
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* --- RESET -------------------------------------------------------- */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --- CUSTOM -------------------------------------------------------- */
+html {
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  background-color: #f9f7f5;
+}
+
+body {
+  position: relative;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+main {
+  padding: 5.75rem 2rem 11.75rem;
+  width: 100%;
+}
+
+hr {
+  margin: 0 2rem;
+  opacity: 0.5;
+}
+
+/* --- HEADER ----------------------------------------------------*/
+.pp-global-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 5.75rem;
+  padding: 1.5rem 0;
+  margin: 0 2rem;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 100;
+  background-color: transparent;
+}
+
+.desktop-nav-container nav {
+  margin-left: 2rem;
+}
+
+.desktop-nav-container ul {
+  display: flex;
+  justify-content: end;
+  padding: 0;
+  min-width: 326px;
+}
+
+.desktop-nav-container li {
+  list-style: none;
+  margin: 0 1rem;
+}
+.desktop-nav-container li:first-child {
+  margin-left: 0;
+}
+.desktop-nav-container li:last-child {
+  margin-right: 0;
+}
+
+.pp-global-header a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.pp-global-header-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+}
+
+.pp-global-header-logo-container svg {
+  height: 100%;
+  width: 2.75rem;
+  margin-right: 2rem;
+}
+
+.pp-global-header-logo-container h1 {
+  font-size: 2rem;
+}
+
+/* --- MOBILE NAV ---*/
+
+.pp-mobile-menu-btn {
+  display: none;
+  background-color: inherit;
+  border: none;
+}
+
+.pp-mobile-menu-btn:hover {
+  cursor: pointer;
+}
+
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -100%;
+  left: 100%;
+
+  z-index: 100;
+  margin-top: 5.75rem;
+  text-align: center;
+
+  background-color: rgb(249, 208, 214);
+
+  transition: all 0.2s;
+}
+
+.mobile-drawer.active {
+  left: 0;
+  right: 0;
+}
+
+.mobile-drawer ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.mobile-drawer li {
+  list-style: none;
+  margin: 0.75rem;
+}
+
+.mobile-drawer button {
+  background-color: inherit;
+  border: none;
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* --- MEDIA QUERIES---*/
+@media only screen and (max-width: 900px) {
+  .pp-global-header-logo-container h1 {
+    font-size: 1.25rem;
+  }
+
+  .pp-global-header-logo-container svg {
+    display: none;
+  }
+
+  .desktop-nav-container nav {
+    display: none;
+  }
+
+  .pp-mobile-menu-btn {
+    /* display: block; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* --- FOOTER -------------------------------------------------------- */
+.pp-global-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1.5rem 2rem 3rem 2rem;
+  background-color: lightgrey;
+
+  font-size: 0.9rem;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.pp-global-footer p {
+  font-weight: bold;
+}
+
+.pp-global-footer ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.pp-global-footer li {
+  list-style: none;
+}
+/* ------------------------------------------------------------------- */
+
+/* --- BLOCK: BANNER ------------------------------------------------- */
+.pp-block-banner {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: pink;
+
+  position: relative;
+  top: -5.75rem;
+
+  margin: 0 -2rem;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.pp-block-banner h2 {
+  z-index: 1;
+  font-size: 6vw;
+  color: #fff;
+  overflow-wrap: break-word;
+
+  text-align: center;
+}
+
+.pp-block-banner-buffer {
+  margin: -5.75rem 0 0;
+}
+
+@media only screen and (max-width: 620px) {
+  .pp-block-banner h2 {
+    font-size: 14vw;
+  }
+}

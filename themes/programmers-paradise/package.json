@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build": "wp-scripts build assets/src/index.js --output-path=assets/build",
+    "start": "wp-scripts start assets/src/index.js --output-path=assets/build"
+  },
+  "dependencies": {
+    "@wordpress/scripts": "*"
+  }
+}
