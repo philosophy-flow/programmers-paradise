@@ -133,6 +133,12 @@ hr {
   transition: all .5s;
 }
 
+.header-inverted {
+  color: #fff;
+  border-color: #fff;
+  fill: #fff;
+}
+
 .desktop-nav-container nav {
   margin-left: 2rem;
 }

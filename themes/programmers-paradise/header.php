@@ -14,10 +14,10 @@ $invertHeaderColor = get_field('invert_header_color');
 </head>
 
 <body>
-  <header id="pp-global-header" class="pp-global-header" style="<?php echo $invertHeaderColor ? 'color: #fff; border-color: #fff' : ''; ?>">
+  <header id="pp-global-header" class="pp-global-header <?php echo $invertHeaderColor ? 'header-inverted' : '' ?>">
     <a href="<?php echo get_home_url(); ?>" class="pp-global-header-logo-container">
       <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
-        <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="<?php echo $invertHeaderColor ? ' #fff' : '#000'; ?>" stroke="none">
+        <g id="nav-logo" class="<?php echo $invertHeaderColor ? 'header-inverted' : '' ?>" transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000" stroke="none">
           <path d="M1822 5050 c-265 -56 -486 -367 -547 -770 -18 -112 -19 -337 -4 -446
               80 -577 471 -929 834 -750 161 79 292 248 374 479 135 383 94 860 -101 1184
               -33 55 -143 183 -157 183 -5 0 -42 -114 -85 -253 l-76 -254 23 -54 c74 -168
@@ -55,7 +55,7 @@ $invertHeaderColor = get_field('invert_header_color');
 
     <button id="pp-mobile-menu-btn" class="pp-mobile-menu-btn">
       <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="30.000000pt" height="30.000000pt" viewBox="0 0 30.000000 30.000000" preserveAspectRatio="xMidYMid meet">
-        <g transform="translate(0.000000,30.000000) scale(0.100000,-0.100000)" fill="<?php echo $invertHeaderColor ? ' #fff' : '#000'; ?>" stroke="none">
+        <g class="<?php echo $invertHeaderColor ? 'header-inverted' : '' ?>" transform="translate(0.000000,30.000000) scale(0.100000,-0.100000)" fill="#000" stroke="none">
           <path d="M20 220 c0 -6 50 -10 130 -10 80 0 130 4 130 10 0 6 -50 10 -130 10 -80 0 -130 -4 -130 -10z" />
           <path d="M20 150 c0 -6 50 -10 130 -10 80 0 130 4 130 10 0 6 -50 10 -130 10 -80 0 -130 -4 -130 -10z" />
           <path d="M20 80 c0 -6 50 -10 130 -10 80 0 130 4 130 10 0 6 -50 10 -130 10 -80 0 -130 -4 -130 -10z" />
