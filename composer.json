@@ -22,7 +22,8 @@
   ],
   "require": {
     "wpackagist-plugin/disable-gutenberg-blocks": "1.0.9",
-    "acf-pro/acf-pro": "*"
+    "acf-pro/acf-pro": "*",
+    "timber/timber": "1.*"
   },
   "config": {
     "allow-plugins": {
