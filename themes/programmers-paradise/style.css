@@ -139,7 +139,7 @@ hr {
   fill: #fff;
 }
 
-.desktop-nav-container nav {
+.desktop-nav-container {
   margin-left: 2rem;
 }
 
@@ -248,7 +248,7 @@ hr {
     display: none;
   }
 
-  .desktop-nav-container nav {
+  .desktop-nav-container {
     display: none;
   }
 

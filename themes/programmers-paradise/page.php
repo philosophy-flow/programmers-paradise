@@ -1,12 +1,14 @@
-<?php get_header(); ?>
-<main>
-  <?php
-  if (have_posts()) {
-    while (have_posts()) {
-      the_post();
-      the_content();
-    }
-  }
-  ?>
-</main>
-<?php get_footer(); ?>
+<?php
+
+$context = Timber::context();
+
+$timber_post = new Timber\Post();
+$context['post'] = $timber_post;
+
+Timber::render(
+    array(
+        'pages/' . $timber_post->post_name . '.twig',
+        'page.twig',
+    ),
+    $context
+);

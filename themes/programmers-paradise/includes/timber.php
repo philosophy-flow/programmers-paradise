@@ -20,7 +20,7 @@ Timber::$dirname = array('templates');
 //  * By default, Timber does NOT autoescape values. Want to enable Twig's autoescape?
 //  * No prob! Just set this value to true
 //  */
-Timber::$autoescape = true;
+Timber::$autoescape = false;
 
 // /**
 //  * We're going to configure our theme inside of a subclass of Timber\Site
