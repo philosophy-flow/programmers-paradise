@@ -1,8 +1,15 @@
 <!-- home.php displays the website's blog posts -->
-<?php get_header(); ?>
-<main>
-  <p>
-    This page will eventually display all of the blog posts on the website.
-  </p>
-</main>
-<?php get_footer(); ?>
+<?php
+
+$context = Timber::context();
+
+$timber_post = new Timber\Post();
+$context['post'] = $timber_post;
+
+Timber::render(
+    array(
+        'pages/' . $timber_post->post_name . '.twig',
+        'page.twig',
+    ),
+    $context
+);
