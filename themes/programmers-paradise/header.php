@@ -14,7 +14,7 @@ $invertHeaderColor = get_field('invert_header_color');
 </head>
 
 <body>
-  <header class="pp-global-header" style="<?php echo $invertHeaderColor ? 'color: #fff' : ''; ?>">
+  <header id="pp-global-header" class="pp-global-header" style="<?php echo $invertHeaderColor ? 'color: #fff; border-color: #fff' : ''; ?>">
     <a href="<?php echo get_home_url(); ?>" class="pp-global-header-logo-container">
       <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
         <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="<?php echo $invertHeaderColor ? ' #fff' : '#000'; ?>" stroke="none">
