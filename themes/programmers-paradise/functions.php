@@ -21,7 +21,7 @@ function register_pp_styles() {
     'all'
   );
 
-  $version = wp_get_theme()->get('Version');
+  $version = rand(111,9999);
   wp_enqueue_style(
     'pp-custom-styles',
     get_stylesheet_uri(),
@@ -33,11 +33,12 @@ function register_pp_styles() {
 add_action('wp_enqueue_scripts', 'register_pp_styles');
 
 function register_pp_scripts() {
+  $version = rand(111,9999);
   wp_enqueue_script(
     'pp_scripts',
     get_template_directory_uri() . '/assets/build/index.js',
     array(),
-    null,
+    $version,
     true
   );
 }
