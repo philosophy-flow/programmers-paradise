@@ -1,3 +1,5 @@
+// This handles the visibility of the navigation bar on scroll
+
 export default class Menu {
   // register items, execute events function
   constructor() {

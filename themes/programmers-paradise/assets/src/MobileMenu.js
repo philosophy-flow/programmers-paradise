@@ -1,3 +1,5 @@
+// This handles the functionality of the mobile menu/
+
 export default class MobileMenu {
   // register items, execute events function
   constructor() {
